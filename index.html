@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Random Recipe Finder</h1>
+
+  <form id="filter-form">
+    <label for="cuisine">Cuisine:</label>
+    <select id="cuisine" name="cuisine">
+      <option value="">Any</option>
+      <option value="Italian">Italian</option>
+      <option value="Mexican">Mexican</option>
+      <option value="Chinese">Chinese</option>
+    </select>
+
+    <label for="meal">Meal:</label>
+    <select id="meal" name="meal">
+      <option value="">Any</option>
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+
+    <label>
+      <input type="checkbox" id="vegetarian" name="vegetarian"> Vegetarian Only
+    </label>
+
+    <button type="submit">Find Recipe</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
