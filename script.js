@@ -1,8 +1,7 @@
-const API_KEY = 'YOUR_SPOONACULAR_API_KEY'; // Replace with your Spoonacular API key
-
 document.getElementById('filter-form').addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  const apiKey = document.getElementById('api-key').value.trim();
   const cuisine = document.getElementById('cuisine').value;
   const meal = document.getElementById('meal').value.toLowerCase();
   const vegetarian = document.getElementById('vegetarian').checked;
@@ -12,14 +11,18 @@ document.getElementById('filter-form').addEventListener('submit', async (e) => {
   if (meal) tags.push(meal);
   if (vegetarian) tags.push('vegetarian');
 
-  const url = `https://api.spoonacular.com/recipes/random?number=1&tags=${tags.join(',')}&apiKey=${API_KEY}`;
+  const url = `https://api.perplexity.ai/recipes/random?tags=${encodeURIComponent(tags.join(','))}`;
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${apiKey}`
+      }
+    });
     if (!response.ok) throw new Error('Network response was not ok');
 
     const data = await response.json();
-    const recipe = data.recipes && data.recipes[0];
+    const recipe = data.recipe || (data.recipes && data.recipes[0]);
     if (recipe) {
       document.getElementById('result').innerHTML = `<h2>${recipe.title}</h2>` +
         `<img src="${recipe.image}" alt="${recipe.title}" width="300">` +

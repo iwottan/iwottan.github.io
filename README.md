@@ -1,11 +1,11 @@
 # Recipe Finder
 
-This is a simple demo website for randomly selecting recipes using the Spoonacular API. Users can filter by cuisine, meal type and vegetarian option.
+This is a simple demo website for randomly selecting recipes using the Perplexity API. Users can filter by cuisine, meal type and vegetarian option.
 
 ## Setup
 
-1. Obtain an API key from [Spoonacular](https://spoonacular.com/food-api).
-2. Edit `script.js` and replace `YOUR_SPOONACULAR_API_KEY` with your key.
+1. Obtain an API key from Perplexity.
+2. Open `index.html` and enter your API key in the "Perplexity API Key" field.
 
 ## Usage
 
