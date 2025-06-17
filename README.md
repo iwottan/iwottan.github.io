@@ -1,13 +1,12 @@
 # Recipe Finder
 
-This is a simple demo website for randomly selecting recipes based on cuisine, meal type and vegetarian options. It uses HTML, CSS, JavaScript and PHP.
+This is a simple demo website for randomly selecting recipes using the Spoonacular API. Users can filter by cuisine, meal type and vegetarian option.
+
+## Setup
+
+1. Obtain an API key from [Spoonacular](https://spoonacular.com/food-api).
+2. Edit `script.js` and replace `YOUR_SPOONACULAR_API_KEY` with your key.
 
 ## Usage
 
-Serve the project with a PHP-enabled web server. For example using the built-in PHP server:
-
-```
-php -S localhost:8000
-```
-
-Then navigate to `http://localhost:8000/index.html` in your browser.
+Serve the project with any static web server (no PHP required), or simply open `index.html` in your browser.
