@@ -11,7 +11,7 @@ document.getElementById('filter-form').addEventListener('submit', async (e) => {
   if (meal) tags.push(meal);
   if (vegetarian) tags.push('vegetarian');
 
-  const url = `https://api.perplexity.ai/v2/recipes/random?tags=${encodeURIComponent(tags.join(','))}`;
+  const url = `https://api.perplexity.ai/recipes/random?tags=${encodeURIComponent(tags.join(','))}`;
 
   try {
     const response = await fetch(url, {

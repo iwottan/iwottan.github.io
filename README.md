@@ -7,8 +7,8 @@ This is a simple demo website for randomly selecting recipes using the Perplexit
 1. Obtain an API key from Perplexity.
 2. Open `index.html` and enter your API key in the "Perplexity API Key" field.
 
-The script uses Perplexity's latest `v2` API endpoint:
-`https://api.perplexity.ai/v2/recipes/random`.
+The script uses Perplexity's API endpoint:
+`https://api.perplexity.ai/recipes/random`.
 
 ## Usage
 
